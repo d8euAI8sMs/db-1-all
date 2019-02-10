@@ -1,0 +1,31 @@
+﻿<mui:ModernWindow x:Class="PhoneBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Phone Book" IsTitleVisible="True"
+        ContentSource="/Pages/DBConnection.xaml" Icon="k.ico">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Database">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="connection" Source="/Pages/DBConnection.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Data">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="cities" Source="/Pages/Cities.xaml" />
+                <mui:Link DisplayName="persons" Source="/Pages/Persons.xaml" />
+                <mui:Link DisplayName="contacts" Source="/Pages/Contacts.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="about" GroupKey="about">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="about" Source="/Pages/About.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+    
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="about" Source="/Pages/About.xaml" />
+    </mui:ModernWindow.TitleLinks>
+</mui:ModernWindow>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="PhoneBook.Pages.ContactEditPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" Width="300">
+    
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </UserControl.Resources>
+    
+    <StackPanel>
+        <Grid Style="{StaticResource ContentRoot}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Person:" Grid.Row="0" Grid.Column="0" />           <ComboBox ItemsSource="{Binding Persons}" SelectedItem="{Binding Path=Contact.Person}" DisplayMemberPath="Name" Grid.Row="0" Grid.Column="1" IsSynchronizedWithCurrentItem="True"/>
+            <TextBlock Text="Phone:" Grid.Row="1" Grid.Column="0" />            <TextBox Text="{Binding Path=Contact.Phone}" Grid.Row="1" Grid.Column="1" />
+            <TextBlock Text="Phone Type:" Grid.Row="2" Grid.Column="0" />       <ComboBox ItemsSource="{Binding Path=ContactTypes}" SelectedItem="{Binding Path=Contact.Type}" Grid.Row="2" Grid.Column="1" SelectionChanged="ComboBox_Selected" />
+            <TextBlock Text="City:" Grid.Row="3" Grid.Column="0" />             <ComboBox ItemsSource="{Binding Cities}" SelectedItem="{Binding Path=Contact.City}" DisplayMemberPath="Name" IsEnabled="{Binding Path=IsCityPhone, Mode=OneWay}" Grid.Row="3" Grid.Column="1" IsSynchronizedWithCurrentItem="True"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

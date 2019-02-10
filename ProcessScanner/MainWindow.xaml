@@ -1,0 +1,29 @@
+﻿<mui:ModernWindow x:Class="ProcessScanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="ProcessScanner" IsTitleVisible="True"
+        ContentSource="/Pages/DBConnection.xaml" Icon="k.ico" Width="900">
+
+<mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Database">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="connection" Source="/Pages/DBConnection.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Analysis">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="statistics" Source="/Pages/Statistics.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="about" GroupKey="about">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="about" Source="/Pages/About.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="about" Source="/Pages/About.xaml" />
+    </mui:ModernWindow.TitleLinks>
+</mui:ModernWindow>
