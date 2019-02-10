@@ -8,7 +8,7 @@ Some problems related to SQL databases (esp. MS SqlServer).
 
 ## Details
 
-Visual Studio 2013 project (C++, MFC).
+Visual Studio 2013 project (C#, WPF).
 
 ## Getting Source Code
 
